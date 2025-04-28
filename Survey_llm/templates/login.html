@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    /* login style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="email"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  </style>
+  
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form method="POST">
+      <label for="email">Hawk Email:</label>
+      <input type="email" name="email" id="email" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html> 
+
+
+
+
+

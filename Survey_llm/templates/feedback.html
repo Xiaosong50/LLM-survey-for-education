@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Feedback Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Results</h1>
+    <a href="/download_feedback" style="display:inline-block; margin-bottom: 20px; padding: 8px 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Download as CSV</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Feedback ID</th>
+                <th>Student ID</th>
+                <th>Question ID</th>
+                <th>Initial Understanding</th>
+                <th>LLM Default Rank</th>
+                <th>LLM Skills Rank</th>
+                <th>LLM Hobbies Rank</th>
+                <th>LLM Subjects Rank</th>
+                <th>LLM All Rank</th>
+                <th>Final Understanding</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in feedbacks %}
+            <tr>
+                <td>{{ f.feedback_id }}</td>
+                <td>{{ f.student_id }}</td>
+                <td>{{ f.question_id }}</td>
+                <td>{{ f.initial_understanding }}</td>
+                <td>{{ f.llm_default_rank }}</td>
+                <td>{{ f.llm_skills_rank }}</td>
+                <td>{{ f.llm_hobbies_rank }}</td>
+                <td>{{ f.llm_subjects_rank }}</td>
+                <td>{{ f.llm_all_rank }}</td>
+                <td>{{ f.final_understanding }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
